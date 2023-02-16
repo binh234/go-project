@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Barcode generator</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>{{.Title}}</h1>
+        <div>Please enter the string you want to QRCode.</div>
+        <form action="generator/" method=post>
+            <input type="text" name="dataString">
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
