@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"log"
+	"sync"
 	"time"
 
 	"github.com/spf13/viper"
@@ -16,15 +17,15 @@ type MongoInstance struct {
 	DB     *mongo.Database
 }
 
-var mg MongoInstance
+var mg *MongoInstance
+var once sync.Once
 
 const dbName = "hrms"
 
 var mongoURI string
-
 var serverAPIOptions = options.ServerAPI(options.ServerAPIVersion1)
 
-func getConfig() {
+func init() {
 	// Set up the configuration file
 	viper.SetConfigFile("config.json")
 	viper.ReadInConfig()
@@ -33,8 +34,7 @@ func getConfig() {
 	mongoURI = viper.GetString("MONGO_URI")
 }
 
-func Connect() {
-	getConfig()
+func connect() {
 	clientOptions := options.Client().ApplyURI(mongoURI).SetServerAPIOptions(serverAPIOptions)
 	ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
 	defer cancel()
@@ -45,12 +45,13 @@ func Connect() {
 	}
 
 	db := client.Database(dbName)
-	mg = MongoInstance{
+	mg = &MongoInstance{
 		Client: client,
 		DB:     db,
 	}
 }
 
-func GetMongoInstance() MongoInstance {
+func GetMongoInstance() *MongoInstance {
+	once.Do(connect)
 	return mg
 }

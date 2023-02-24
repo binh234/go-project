@@ -10,10 +10,9 @@ import (
 	"go.mongodb.org/mongo-driver/mongo"
 )
 
-var mg database.MongoInstance
+var mg *database.MongoInstance
 
 func init() {
-	database.Connect()
 	mg = database.GetMongoInstance()
 }
 
