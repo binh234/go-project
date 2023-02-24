@@ -10,11 +10,7 @@ import (
 	"go.mongodb.org/mongo-driver/mongo"
 )
 
-var mg *database.MongoInstance
-
-func init() {
-	mg = database.GetMongoInstance()
-}
+var mg *database.MongoInstance = database.GetMongoInstance()
 
 func GetAllEmployees(c *fiber.Ctx) error {
 	query := bson.D{{}}
