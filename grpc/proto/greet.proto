@@ -5,12 +5,16 @@ option go_package = "./proto";
 package greet_service;
 
 service GreetService {
+    // Unary - like request and response
     rpc SayHello (NoPram) returns (HelloResponse);
 
+    // Server streaming - client send a request and get a stream of response
     rpc SayHelloServerStreaming (NamesList) returns (stream HelloResponse);
 
+    // Client streaming - client send a stream of request and get back a response
     rpc SayHelloClientStreaming (stream HelloRequest) returns (MessagesList);
 
+    // Bidirectional - client and server talk to each other using stream
     rpc SayHelloBidirectionalStreaming (stream HelloRequest) returns (stream HelloResponse);
 }
 
