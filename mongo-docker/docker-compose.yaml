@@ -1,0 +1,41 @@
+version: "3.1"
+services:
+  mongodb:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    volumes:
+      - mongodb-data:/data/db
+    networks:
+      - go-mongo
+  mygo:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - mongodb
+    ports:
+      - 8080:8080
+    environment:
+      - CONFIG_MONGO_URI=mongodb://root:example@mongodb
+    networks:
+      - go-mongo
+  mongo-express:
+    image: mongo-express
+    ports:
+      - 8081:8081
+    environment:
+      - ME_CONFIG_MONGODB_ADMINUSERNAME=root
+      - ME_CONFIG_MONGODB_ADMINPASSWORD=example
+      - ME_CONFIG_MONGODB_SERVER=mongodb
+    depends_on: 
+      - mongodb
+    restart: always
+    networks:
+      - go-mongo
+networks:
+  go-mongo:
+volumes:
+  mongodb-data:
