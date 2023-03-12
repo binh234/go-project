@@ -13,3 +13,4 @@ Golang pet projects
 9. [guardian-scraper](https://github.com/binh234/go-project/tree/main/guradian-scraper): HTML scraper for [guardian.com](https://www.theguardian.com) using go routines
 10. [mysql](https://github.com/binh234/go-project/tree/main/mysql): Connect Golang with MySQL using gORM
 11. [graphql](https://github.com/binh234/go-project/tree/main/graphql): Experiment GraphQL with Golang and mongoDB
+11. [mongo-docker](https://github.com/binh234/go-project/tree/main/graphql): Experiment connecting Golang with mongoDB using Docker compose
