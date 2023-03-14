@@ -43,6 +43,10 @@ psd
 thumb
 sketch
 
+# Environment
+.env
+.env.development
+
 # test directory
 test/
 
