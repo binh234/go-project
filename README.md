@@ -1,7 +1,9 @@
 # go-project
+
 Golang pet projects
 
 ## Brief descriptions
+
 1. [go-server](https://github.com/binh234/go-project/tree/main/go-server): Simple web server with Golang using `http` package
 2. [barcode](https://github.com/binh234/go-project/tree/main/barcode): Barcode generator
 3. [email-verifier](https://github.com/binh234/go-project/tree/main/go-crud): Simple email verifier tool
@@ -13,4 +15,5 @@ Golang pet projects
 9. [guardian-scraper](https://github.com/binh234/go-project/tree/main/guradian-scraper): HTML scraper for [guardian.com](https://www.theguardian.com) using go routines
 10. [mysql](https://github.com/binh234/go-project/tree/main/mysql): Connect Golang with MySQL using gORM
 11. [graphql](https://github.com/binh234/go-project/tree/main/graphql): Experiment GraphQL with Golang and mongoDB
-11. [mongo-docker](https://github.com/binh234/go-project/tree/main/graphql): Experiment connecting Golang with mongoDB using Docker compose
+12. [mongo-docker](https://github.com/binh234/go-project/tree/main/mongo-docker): Experiment connecting Golang with mongoDB using Docker compose
+13. [openai](https://github.com/binh234/go-project/tree/main/graphql): Quick playaround with OpenAI models
