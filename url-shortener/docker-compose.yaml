@@ -15,8 +15,11 @@ services:
     ports:
       - 6379
     volumes:
-      - .data:/data
+      - rd-data:/data
     networks:
       - url-shortener
 networks:
   url-shortener:
+
+volumes:
+  rd-data:

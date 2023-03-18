@@ -99,9 +99,10 @@ func ShortenURL(c *fiber.Ctx) error {
 	}
 
 	// Check if shortened URL existed in DB
-	if val != "" {
+	// Expand expiration for existing pair (curstomShort, URL) if possible
+	if val != "" && val != body.URL {
 		return c.Status(fiber.StatusForbidden).JSON(fiber.Map{
-			"error": "URL custom short is already in use",
+			"error": "URL short is already in use. Please try again later",
 		})
 	}
 
