@@ -11,6 +11,8 @@
 *.dll
 *.so
 *.dylib
+*.zip
+*.tar
 
 # Configuration files
 config.json
