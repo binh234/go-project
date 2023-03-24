@@ -29,6 +29,9 @@ config.json
 # Go workspace file
 go.work
 
+# Go build folder
+build/
+
 ### react ###
 .DS_*
 *.log
