@@ -1,0 +1,49 @@
+# DO NOT EDIT.
+# This is Mantil project state file maintained by Mantil.
+# It is stored in human readable format so you can
+# add it to git and have history of all changes.
+name: gomantil
+stages:
+- name: development
+  default: true
+  node: dev
+  keys:
+    public: WTPtc7fKfVR_fmy8xoPUOrT2i_o9X2Zpsal2x0ENvg8
+    private: 7sBF-9XzeOYWFoyXiE_sIcwlIKB_0_VQRNFL9DZIRIJZM-1zt8p9VH9-bLzGg9Q6tPaL-j1fZmmxqXbHQQ2-Dw
+  endpoints:
+    rest: https://hzjorkwq13.execute-api.ap-southeast-1.amazonaws.com
+    ws: wss://5x01yfp9mb.execute-api.ap-southeast-1.amazonaws.com
+  last_deployment:
+    version: v0.2.12
+    timestamp: 1679665947874
+  functions:
+  - name: ping
+    hash: b105582f
+    s3_key: functions/gomantil/development/ping-b105582f.zip
+    memory_size: 128
+    timeout: 900
+    env:
+      MANTIL_GO_CONFIG: eyJSZXNvdXJjZVRhZ3MiOnsiTUFOVElMX0tFWSI6IjUxZDI5N2FhIiwiTUFOVElMX1BST0pFQ1QiOiJnb21hbnRpbCIsIk1BTlRJTF9TVEFHRSI6ImRldmVsb3BtZW50In0sIldzRm9yd2FyZGVyTmFtZSI6Im1hbnRpbC1nb21hbnRpbC1kZXZlbG9wbWVudC13cy1mb3J3YXJkZXItNTFkMjk3YWEiLCJOYW1pbmdUZW1wbGF0ZSI6ImdvbWFudGlsLWRldmVsb3BtZW50LSVzLTUxZDI5N2FhIn0=
+      MANTIL_KEY: 51d297aa
+      MANTIL_PROJECT: gomantil
+      MANTIL_STAGE: development
+  - name: auth
+    hash: 5dc53e48
+    s3_key: functions/gomantil/development/auth-5dc53e48.zip
+    memory_size: 128
+    timeout: 900
+    env:
+      MANTIL_GO_CONFIG: eyJSZXNvdXJjZVRhZ3MiOnsiTUFOVElMX0tFWSI6IjUxZDI5N2FhIiwiTUFOVElMX1BST0pFQ1QiOiJnb21hbnRpbCIsIk1BTlRJTF9TVEFHRSI6ImRldmVsb3BtZW50In0sIldzRm9yd2FyZGVyTmFtZSI6Im1hbnRpbC1nb21hbnRpbC1kZXZlbG9wbWVudC13cy1mb3J3YXJkZXItNTFkMjk3YWEiLCJOYW1pbmdUZW1wbGF0ZSI6ImdvbWFudGlsLWRldmVsb3BtZW50LSVzLTUxZDI5N2FhIn0=
+      MANTIL_KEY: 51d297aa
+      MANTIL_PROJECT: gomantil
+      MANTIL_STAGE: development
+  - name: movie
+    hash: 93c0972b
+    s3_key: functions/gomantil/development/movie-93c0972b.zip
+    memory_size: 128
+    timeout: 900
+    env:
+      MANTIL_GO_CONFIG: eyJSZXNvdXJjZVRhZ3MiOnsiTUFOVElMX0tFWSI6IjUxZDI5N2FhIiwiTUFOVElMX1BST0pFQ1QiOiJnb21hbnRpbCIsIk1BTlRJTF9TVEFHRSI6ImRldmVsb3BtZW50In0sIldzRm9yd2FyZGVyTmFtZSI6Im1hbnRpbC1nb21hbnRpbC1kZXZlbG9wbWVudC13cy1mb3J3YXJkZXItNTFkMjk3YWEiLCJOYW1pbmdUZW1wbGF0ZSI6ImdvbWFudGlsLWRldmVsb3BtZW50LSVzLTUxZDI5N2FhIn0=
+      MANTIL_KEY: 51d297aa
+      MANTIL_PROJECT: gomantil
+      MANTIL_STAGE: development
