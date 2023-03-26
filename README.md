@@ -16,4 +16,6 @@ Golang pet projects
 10. [mysql](https://github.com/binh234/go-project/tree/main/mysql): Connect Golang with MySQL using gORM
 11. [graphql](https://github.com/binh234/go-project/tree/main/graphql): Experiment GraphQL with Golang and mongoDB
 12. [mongo-docker](https://github.com/binh234/go-project/tree/main/mongo-docker): Experiment connecting Golang with mongoDB using Docker compose
-13. [openai](https://github.com/binh234/go-project/tree/main/graphql): Quick playaround with OpenAI models
+13. [openai](https://github.com/binh234/go-project/tree/main/openai): Quick playaround with OpenAI models via OpenAI API
+14. [go-lambda](https://github.com/binh234/go-project/tree/main/go-lambda): Experiment deploying Go application on AWS Lambda
+15. [gomantil](https://github.com/binh234/go-project/tree/main/gomantil): Experiment Mantil - Serverless development kit for Go and AWS Lambda
