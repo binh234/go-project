@@ -12,13 +12,10 @@ import (
 	"github.com/spf13/viper"
 )
 
-func GetResponse(client gpt3.Client, ctx context.Context, question string) {
+func GetResponse(client gpt3.Client, ctx context.Context, messages []gpt3.ChatCompletionRequestMessage) {
 	err := client.ChatCompletionStream(ctx, gpt3.ChatCompletionRequest{
-		Model: "gpt-3.5-turbo",
-		Messages: []gpt3.ChatCompletionRequestMessage{{
-			Role:    "user",
-			Content: question,
-		}},
+		Model:            "gpt-3.5-turbo",
+		Messages:         messages,
 		Temperature:      0.5,
 		MaxTokens:        150,
 		TopP:             1,
@@ -27,7 +24,11 @@ func GetResponse(client gpt3.Client, ctx context.Context, question string) {
 		PresencePenalty:  0.6,
 		Stop:             []string{" Human:", " AI:"},
 	}, func(resp *gpt3.ChatCompletionStreamResponse) {
-		fmt.Print(resp.Choices[0].Delta.Content)
+		answer := resp.Choices[0].Delta.Content
+		messages = append(messages, gpt3.ChatCompletionRequestMessage{
+			Role:    "user",
+			Content: answer})
+		fmt.Print(answer)
 	})
 	if err != nil {
 		fmt.Println(err.Error())
@@ -40,6 +41,9 @@ func main() {
 	viper.SetConfigFile(".env")
 	viper.ReadInConfig()
 	apiKey := viper.GetString("OPENAI_API_KEY")
+	messages := []gpt3.ChatCompletionRequestMessage{{
+		Role:    "system",
+		Content: "You are a helpful assistant."}}
 
 	if apiKey == "" {
 		log.Fatalln("Missing API key. Please check OPEN_AI_KEY inside .env file")
@@ -63,7 +67,10 @@ func main() {
 				case "quit":
 					quit = true
 				default:
-					GetResponse(client, ctx, question)
+					messages = append(messages, gpt3.ChatCompletionRequestMessage{
+						Role:    "user",
+						Content: question})
+					GetResponse(client, ctx, messages)
 				}
 			}
 		},
