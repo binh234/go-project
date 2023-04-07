@@ -16,7 +16,7 @@ func GetJWT() (string, error) {
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, jwt.MapClaims{
 		"authorized": true,
 		"client":     "Binh Le",
-		"aud":        "billing.jwt.go.io",
+		"aud":        "billing.jwtgo.io",
 		"iss":        "jwtgo.io",
 		"exp":        time.Now().Add(time.Minute * 5).Unix(),
 	})
