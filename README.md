@@ -20,3 +20,4 @@ Golang pet projects
 14. [go-lambda](https://github.com/binh234/go-project/tree/main/go-lambda): Experiment deploying Go application on AWS Lambda
 15. [gomantil](https://github.com/binh234/go-project/tree/main/gomantil): Experiment Mantil - Serverless development kit for Go and AWS Lambda
 16. [go-jwt](https://github.com/binh234/go-project/tree/main/go-jwt): Experiment JSON Web Token (JWT) for authentication with Go
+17. [go-microservice](https://github.com/binh234/go-project/tree/main/go-microservice): Simple microservice project, including one 1 JWT server and an app that use JWT for authentication.
