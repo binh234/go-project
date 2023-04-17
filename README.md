@@ -21,3 +21,4 @@ Golang pet projects
 15. [gomantil](https://github.com/binh234/go-project/tree/main/gomantil): Experiment Mantil - Serverless development kit for Go and AWS Lambda
 16. [go-jwt](https://github.com/binh234/go-project/tree/main/go-jwt): Experiment JSON Web Token (JWT) for authentication with Go
 17. [go-microservice](https://github.com/binh234/go-project/tree/main/go-microservice): Simple microservice project, including one 1 JWT server and an app that use JWT for authentication.
+18. [url-shortener](https://github.com/binh234/go-project/tree/main/url-shortener): An implementation of a URL shortener service using Golang, Fiber, and Redis. Each user can send a maximum of 10 requests per 30 minutes to shorten their URLs. Every shortened URL will have an expiration of 24 hours by default.
