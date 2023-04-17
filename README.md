@@ -19,3 +19,4 @@ Golang pet projects
 13. [openai](https://github.com/binh234/go-project/tree/main/openai): Quick playaround with OpenAI models via OpenAI API
 14. [go-lambda](https://github.com/binh234/go-project/tree/main/go-lambda): Experiment deploying Go application on AWS Lambda
 15. [gomantil](https://github.com/binh234/go-project/tree/main/gomantil): Experiment Mantil - Serverless development kit for Go and AWS Lambda
+16. [go-jwt](https://github.com/binh234/go-project/tree/main/go-jwt): Experiment JSON Web Token (JWT) for authentication with Go
